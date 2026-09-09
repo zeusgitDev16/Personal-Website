@@ -1,0 +1,96 @@
+@import "../../_globalColor";
+
+.main-button {
+  background-color: $greetingsButtonLight; // Replaced default with your light red accent
+  border: solid 1px $greetingsButtonLight;
+  color: #FFFFFF; // Keeps text crisp and readable on red
+  font-weight: 600;
+  width: max-content;
+  padding: 10px 18px; // Scaled down slightly for a sleeker look
+  margin-right: 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 15px;
+  font-size: 0.875rem; // Slightly smaller base size
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.dark-mode .main-button {
+  background-color: $greetingsButtonDark; // Uses your darker scarlet red for dark mode
+  border-color: $greetingsButtonDark;
+  color: #FFFFFF;
+}
+
+.main-button:hover {
+  background-color: transparent;
+  color: $greetingsButtonLight;
+  border-color: $greetingsButtonLight;
+  transition: all 0.3s ease 0s;
+  transform: translateY(-3px);
+}
+
+.dark-mode .main-button:hover {
+  color: $greetingsButtonDark;
+  border-color: $greetingsButtonDark;
+  background-color: transparent;
+}
+
+.project-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.project-button > .main-button {
+  margin-right: 0 !important;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .main-button {
+    font-size: 0.8rem;
+    padding: 8px 14px; // Compact sizing for smaller screens
+    margin-right: 0px;
+    width: 100%; // Makes buttons span nicely or fit comfortably
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 578px) {
+  .main-button {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    max-width: 180px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 512px) {
+  .main-button {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-button {
+    font-size: 0.6rem;
+    padding: 5px 8px;
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-button {
+    font-size: 0.5rem;
+    padding: 5px 7px;
+    max-width: 120px;
+  }
+}
