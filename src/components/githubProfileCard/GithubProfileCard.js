@@ -41,6 +41,8 @@ export default function GithubProfileCard({prof}) {
                 </span>
               </div>
             )}
+           <p className="number"><strong>number:</strong> {contactInfo.number}</p>
+           <p className="email"><strong>email:</strong> {contactInfo.email_address}</p>
             <div className="opp-div">
               <span className="desc-prof">
                 Open for opportunities: {prof.hireable}
