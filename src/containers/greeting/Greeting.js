@@ -8,6 +8,7 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import n8nLottie from "../../assets/lottie/n8nLottie.json";
 import resumeFile from "./millete-mcv.pdf";
 
 export default function Greeting() {
@@ -21,12 +22,12 @@ export default function Greeting() {
     },
     {
       prefix: "I am a ",
-      highlight: "Software developer",
+      highlight: "Workflow Specialist",
       subTitle: greeting.subTitle
     },
     {
       prefix: "I am a ",
-      highlight: "Cybersecurity specialist",
+      highlight: "Developer",
       subTitle: greeting.subTitle
     }
   ];
@@ -90,7 +91,6 @@ export default function Greeting() {
               <SocialMedia />
               <div className="button-greeting-div">
                  <Button text="Contact me" href="#contact" />
-                 <Button text="My Certifications" href="#achievements" />
                    {greeting.resumeLink && (
                    <a
                      href={resumeFile}
@@ -105,7 +105,7 @@ export default function Greeting() {
           </div>
           <div className="greeting-image-div">
             {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} />
+              <DisplayLottie animationData={n8nLottie} />
             ) : (
               <img
                 alt="man sitting on table"
