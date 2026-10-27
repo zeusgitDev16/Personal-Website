@@ -21,13 +21,13 @@ export default function Greeting() {
       subTitle: greeting.subTitle
     },
     {
-      prefix: "I am a ",
-      highlight: "Workflow Specialist",
+      prefix: "I'm a ",
+      highlight: "N8N Developer",
       subTitle: greeting.subTitle
     },
     {
-      prefix: "I am a ",
-      highlight: "Developer",
+      prefix: "I do ",
+      highlight: "Full Stack",
       subTitle: greeting.subTitle
     }
   ];

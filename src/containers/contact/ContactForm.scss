@@ -1,0 +1,115 @@
+@import "../../_globalColor";
+
+.contact-form {
+  max-width: 640px;
+  width: 100%;
+  margin: 2rem 0 0;
+  text-align: left;
+}
+
+.contact-form-field {
+  margin-bottom: 1.25rem;
+}
+
+.contact-form-field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact-form-field input,
+.contact-form-field textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem;
+  border: 1px solid $subTitle !important;
+  border-radius: 4px;
+  background: $lightBackground1;
+  color: $textColor;
+  font: inherit;
+}
+
+.contact-form-field input {
+  height: auto;
+  min-height: 3rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-form-field input::placeholder {
+  color: $subTitle;
+  opacity: 1;
+}
+
+.contact-form-field textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.dark-mode .contact-form-field input,
+.dark-mode .contact-form-field textarea {
+  background: $darkBackground;
+  color: $textColorDark;
+}
+
+.contact-form-field input:focus,
+.contact-form-field textarea:focus {
+  outline: 2px solid $buttonColor;
+  outline-offset: 2px;
+}
+
+.contact-form-submit {
+  padding: 0.75rem 1.25rem;
+  border: 0;
+  border-radius: 4px;
+  background: $buttonColor;
+  color: $textColorDark;
+  font: inherit;
+  cursor: pointer;
+}
+
+.contact-form-submit:hover:not(:disabled) {
+  background: $buttonHover;
+}
+
+.contact-form-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.contact-form-status {
+  margin-top: 1rem;
+}
+
+.contact-form-status.success {
+  color: #16703c;
+}
+
+.contact-form-status.error {
+  color: #b42318;
+}
+
+.dark-mode .contact-form-status.success {
+  color: #7ee2a8;
+}
+
+.dark-mode .contact-form-status.error {
+  color: #ff9a91;
+}
+
+.contact-form-honeypot {
+  position: absolute;
+  left: -5000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (max-width: 1380px), (max-width: 768px) {
+  .contact-form {
+    margin-top: 1.5rem;
+  }
+}

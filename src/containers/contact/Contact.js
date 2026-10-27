@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import "./Contact.scss";
+import ContactForm from "./ContactForm";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {illustration, contactInfo} from "../../portfolio";
 import {Fade} from "react-reveal";
@@ -24,6 +25,7 @@ export default function Contact() {
             >
               {contactInfo.subtitle}
             </p>
+            <ContactForm />
             <div
               className={
                 isDark ? "dark-mode contact-text-div" : "contact-text-div"

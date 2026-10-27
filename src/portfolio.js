@@ -49,7 +49,7 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "Services I Offer",
-  subTitle: "I'm a N8N Automation, Workflow Specialist, and Developer with a passion for building scalable and efficient solutions.",
+  subTitle: "I do N8N Automation, Workflow Engineering, and Web Development with a passion for building scalable and efficient solutions.",
   skills: [
     emoji(
       " Develop highly automative workflows and integrations using N8N, Zapier, and other automation tools"

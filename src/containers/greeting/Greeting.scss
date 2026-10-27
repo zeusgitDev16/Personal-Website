@@ -43,8 +43,8 @@
 }
 
 .greeting-text {
-  // Scaled down: ranges from 1.8rem on mobile to 2.4rem on desktop
-  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-size: 56px;
+  font-weight: 400;
   line-height: 1.1;
   color: $textColor !important;
 }
@@ -95,7 +95,7 @@
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 40px;
   }
   .greeting-text-p {
     font-size: 20px;
