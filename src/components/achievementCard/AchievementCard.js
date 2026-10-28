@@ -2,23 +2,26 @@ import React from "react";
 import "./AchievementCard.scss";
 
 export default function AchievementCard({cardInfo, isDark}) {
-  function openUrlInNewTab(url, name) {
-    if (!url) {
-      console.log(`URL for ${name} not found`);
-      return;
-    }
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
+  const credentialLinks = cardInfo.footer || [];
 
   return (
     <div className={isDark ? "dark-mode certificate-card" : "certificate-card"}>
       <div className="certificate-image-div">
-        <img
-          src={cardInfo.image}
-          alt={cardInfo.imageAlt || "Card Thumbnail"}
-          className="card-image"
-        ></img>
+        {cardInfo.image ? (
+          <img
+            src={cardInfo.image}
+            alt={cardInfo.imageAlt || "Credential badge"}
+            className="card-image"
+          />
+        ) : (
+          <div
+            className="credential-placeholder"
+            role="img"
+            aria-label={cardInfo.imageAlt || "Credential badge"}
+          >
+            <span>{cardInfo.issuer || "Credential"}</span>
+          </div>
+        )}
       </div>
       <div className="certificate-detail-div">
         <h5 className={isDark ? "dark-mode card-title" : "card-title"}>
@@ -28,21 +31,33 @@ export default function AchievementCard({cardInfo, isDark}) {
           {cardInfo.description}
         </p>
       </div>
-      <div className="certificate-card-footer">
-        {cardInfo.footer.map((v, i) => {
-          return (
-            <span
-              key={i}
-              className={
-                isDark ? "dark-mode certificate-tag" : "certificate-tag"
-              }
-              onClick={() => openUrlInNewTab(v.url, v.name)}
-            >
-              {v.name}
-            </span>
-          );
-        })}
-      </div>
+      {credentialLinks.length > 0 && (
+        <div className="certificate-card-footer">
+          {credentialLinks.map((link, i) =>
+            link.url ? (
+              <a
+                key={i}
+                className={
+                  isDark ? "dark-mode certificate-tag" : "certificate-tag"
+                }
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <span
+                key={i}
+                className="certificate-tag certificate-tag-disabled"
+                title="Add the public credential URL to enable this link"
+              >
+                {link.name}
+              </span>
+            )
+          )}
+        </div>
+      )}
     </div>
   );
 }

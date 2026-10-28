@@ -44,6 +44,28 @@
   justify-content: center;
   align-items: center;
 }
+
+.credential-placeholder {
+  width: 190px;
+  height: 190px;
+  border: 2px solid $subTitle;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $buttonColor;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  background: $lightBackground3;
+}
+
+.dark-mode .credential-placeholder {
+  color: $textColorDark;
+  background: $darkBackground;
+}
 .achievement-cards-div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -55,7 +77,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.certificate-card-footer span.certificate-tag {
+.certificate-card-footer .certificate-tag {
   background: $buttonColor;
   color: $lightBackground3;
   vertical-align: middle;
@@ -69,9 +91,19 @@
   line-height: 1.5;
   margin: 0 0.5rem 0.5rem 0;
   padding: 0 0.75em;
+  text-decoration: none;
   cursor: pointer;
   transition: 0.2s ease-in;
 }
-span.certificate-tag:hover {
+a.certificate-tag:hover {
   background: $buttonHover;
+}
+
+.certificate-tag-disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.certificate-tag-disabled:hover {
+  background: $buttonColor;
 }
