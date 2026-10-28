@@ -20,7 +20,7 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Amando Zeus C. Millete",
+  username: "ZeusDev",
   title: "Greetings! I'm Amando",
   subTitle: emoji(
    "Results-driven, tech-savvy developer focused on building impactful solutions through scalable and efficient techniques. I love exploring new ideas, building projects, and working seamlessly either with a team or on my own. Hit me up and let's talk about how my skills can add value to your business."
